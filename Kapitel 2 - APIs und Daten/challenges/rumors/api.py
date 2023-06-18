@@ -50,15 +50,6 @@ def get_all():
     return {'rumors': rumors_list}
 
 
-# update
-# @app.route('/<rumor_id>', methods=['PUT'])
-# def put(rumor_id):
-#     rumor = request.json
-#     db = Database()
-#     db.change("UPDATE rumors SET name = ?, skill_level = ?  WHERE rumor_id = ?",
-#               (rumor['name'], rumor['skill_level'], rumor_id))
-#     return {'rumor_id': rumor_id}
-
 @app.route('/spread/<rumor_id>', methods=['PUT'])
 def put_spread(rumor_id):
     db = Database()
